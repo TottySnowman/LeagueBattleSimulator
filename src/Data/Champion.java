@@ -3,15 +3,6 @@ package Data;
 public class Champion
 {
     private String name;
-    public String getsName()
-    {
-        return name;
-    }
-    public void setsName(String sName)
-    {
-        this.name = sName;
-    }
-
     private String title;
 
     public String getTitle() {
@@ -20,5 +11,23 @@ public class Champion
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    private String icon;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

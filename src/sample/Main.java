@@ -25,7 +25,7 @@ public class Main extends Application {
         DataSource d = new DataSource();
         List<Champion> l = d.readJson();
         for (Champion champion : l) {
-            System.out.print(champion.getsName() + " " + champion.getTitle() + "\n");
+            System.out.print(champion.getName() + " " + champion.getTitle() +  " " + champion.getIcon() + "\n");
         }
         launch(args);
     }
