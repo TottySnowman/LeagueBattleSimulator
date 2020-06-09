@@ -5,6 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import Data.*;
+
+import java.io.IOException;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -17,7 +21,12 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        DataSource d = new DataSource();
+        List<Champion> l = d.readJson();
+        for (Champion champion : l) {
+            System.out.print(champion.getsName() + " " + champion.getTitle() + "\n");
+        }
         launch(args);
     }
 }
