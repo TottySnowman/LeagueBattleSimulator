@@ -1,0 +1,42 @@
+package Controllers;
+
+import java.io.IOException;
+import java.util.List;
+
+import Data.Champion;
+import Data.DataSource;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class View1 {
+    public Button singleplayer;
+
+    public View1() {
+    }
+
+    @FXML
+    void singleplayer(ActionEvent event) {
+        Parent root = null;
+        Stage stage = (Stage)this.singleplayer.getScene().getWindow();
+
+        try {
+            root = (Parent)FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
+            DataSource d = new DataSource();
+            List<Champion> l = d.readJson();
+            for (Champion champion : l) {
+                System.out.print(champion.getName() + " " + champion.getTitle() +  " " + champion.getIcon() + "\n");
+            }
+        } catch (IOException var5) {
+            var5.printStackTrace();
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+}
