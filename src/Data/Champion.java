@@ -4,6 +4,8 @@ public class Champion
 {
     private String name;
     private String title;
+    private String icon;
+    private Stats stats;
 
     public String getTitle() {
         return title;
@@ -12,8 +14,6 @@ public class Champion
     public void setTitle(String title) {
         this.title = title;
     }
-
-    private String icon;
 
     public String getName() {
         return name;
@@ -29,5 +29,15 @@ public class Champion
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public Stats getStats()
+    {
+        return stats;
+    }
+
+    public void setStats(Stats stats)
+    {
+        this.stats = stats;
     }
 }

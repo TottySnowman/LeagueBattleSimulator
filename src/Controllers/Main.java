@@ -22,7 +22,7 @@ public class Main extends Application {
             //scene.getStylesheets().add(this.getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();
-            primaryStage.setTitle("Xue Hua Piao Piao");
+            primaryStage.setTitle("League Battle Simulator");
         } catch (Exception var4) {
             var4.printStackTrace();
         }

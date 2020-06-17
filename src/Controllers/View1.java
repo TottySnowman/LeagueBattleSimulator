@@ -22,14 +22,11 @@ public class View1 {
         Parent root = null;
         Stage stage = (Stage)this.singleplayer.getScene().getWindow();
 
-        try {
+        try
+        {
             root = (Parent)FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
-            DataSource d = new DataSource();
-            //List<Champion> l = d.readJson();
-            //for (Champion champion : l) {
-             //   System.out.print(champion.getName() + " " + champion.getTitle() +  " " + champion.getIcon() + "\n");
-            //}
-        } catch (IOException var5) {
+        } catch (IOException var5)
+        {
             var5.printStackTrace();
         }
 
