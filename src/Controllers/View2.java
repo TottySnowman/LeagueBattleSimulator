@@ -48,7 +48,36 @@ public class View2 implements Initializable
     public Label lblHP;
     @FXML
     public Label lblMagic;
+    DataSource d = new DataSource();
 
+    @FXML
+    void select(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root = null;
+        stage = (Stage)select.getScene().getWindow();
+        Champion randChamp = randChampion();
+        View3 controller3 = new View3(cbChamps.getValue(), randChamp, "Single");
+
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("view3_prefightscreen.fxml"));
+            loader.setController(controller3);
+            root = (Parent)loader.load();
+        }
+        catch (IOException var5)
+        {
+            var5.printStackTrace();
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private Champion randChampion() throws IOException
+    {
+        return d.randomChamp();
+    }
 
     public View2() throws IOException
     {
@@ -57,27 +86,12 @@ public class View2 implements Initializable
 
     private ObservableList<Champion> fillDropdown() throws IOException
     {
-        DataSource d = new DataSource();
         List<Champion> l = d.readJson();
         ObservableList<Champion> oList = FXCollections.observableArrayList(l);
         return oList;
     }
 
-    @FXML
-    void select(ActionEvent event) {
-        Parent root = null;
-        Stage stage = (Stage)this.select.getScene().getWindow();
 
-        try {
-            root = (Parent)FXMLLoader.load(this.getClass().getResource("view3_prefightscreen.fxml"));
-        } catch (IOException var5) {
-            var5.printStackTrace();
-        }
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -93,8 +107,6 @@ public class View2 implements Initializable
                     setText(empty ? "" : champ.getName());
                 }
             };
-
-
             cbChamps.setCellFactory(factory);
             cbChamps.setButtonCell(factory.call(null));
         } catch (IOException e)

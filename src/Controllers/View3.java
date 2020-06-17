@@ -5,7 +5,99 @@
 
 package Controllers;
 
-public class View3 {
-    public View3() {
+import Data.Champion;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class View3 implements Initializable
+{
+    @FXML
+    public Label lblChamp1,lblChamp2;
+    public ImageView ivChamp1, ivChamp2;
+    public Button btnReturn, btnFight;
+    public Champion champ1, champ2;
+    public String sMode;
+
+    public View3(Champion champ1, Champion champ2, String sMode)
+    {
+        if(champ1 == null || champ2 == null)
+        {
+
+        }
+        else
+        {
+            this.champ1 = champ1;
+            this.champ2 = champ2;
+            this.sMode = sMode;
+        }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources)
+    {
+        lblChamp1.setText(champ1.getName());
+        Image imgChamp1 = new Image(champ1.getIcon());
+        ivChamp1.setImage(imgChamp1);
+
+        lblChamp2.setText(champ2.getName());
+        Image imgChamp2 = new Image(champ2.getIcon());
+        ivChamp2.setImage(imgChamp2);
+
+        btnFight.setOnAction(new EventHandler<ActionEvent>()
+        {
+            @Override public void handle(ActionEvent e)
+            {
+                //Fight
+            }
+        });
+
+        btnReturn.setOnAction(new EventHandler<ActionEvent>()
+        {
+            @Override
+            public void handle(ActionEvent event)
+            {
+                Parent root = null;
+                Stage stage = (Stage)btnReturn.getScene().getWindow();
+                if(sMode.equals("Single"))
+                {
+                    try
+                    {
+                        root = (Parent) FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        root = (Parent) FXMLLoader.load(this.getClass().getResource(""));
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
     }
 }

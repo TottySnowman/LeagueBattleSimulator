@@ -18,14 +18,15 @@ public class View1 {
     }
 
     @FXML
-    void singleplayer(ActionEvent event) {
+    void singleplayer(ActionEvent event)
+    {
         Parent root = null;
         Stage stage = (Stage)this.singleplayer.getScene().getWindow();
-
         try
         {
             root = (Parent)FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
-        } catch (IOException var5)
+        }
+        catch (IOException var5)
         {
             var5.printStackTrace();
         }

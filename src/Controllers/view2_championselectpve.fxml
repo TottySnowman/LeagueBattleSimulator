@@ -28,7 +28,7 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="279.0" prefWidth="360.0">
                             <children>
-                                <Button onAction="#select" layoutX="287.0" layoutY="129.0" mnemonicParsing="false" text="Select" />
+                                <Button layoutX="287.0" layoutY="129.0" mnemonicParsing="false" text="Select" onAction="#select" fx:id="select"/>
                                 <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="81.0" layoutY="14.0" prefHeight="190.0" prefWidth="200.0">
                                     <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="63.0">

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class DataSource
 {
@@ -16,5 +17,13 @@ public class DataSource
       Champion[] champions = new Gson().fromJson(reader, Champion[].class);
 
       return Arrays.asList(champions);
+   }
+
+   public Champion randomChamp() throws IOException
+   {
+      List<Champion> cList = readJson();
+      Random rand = new Random();
+      int iRand = rand.nextInt(cList.size());
+      return cList.get(iRand);
    }
 }
