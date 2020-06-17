@@ -1,9 +1,5 @@
 package Controllers;
 
-import java.io.IOException;
-import java.util.List;
-
-import Data.Champion;
 import Data.DataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class View1 {
     public Button singleplayer;
@@ -27,10 +25,10 @@ public class View1 {
         try {
             root = (Parent)FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
             DataSource d = new DataSource();
-            List<Champion> l = d.readJson();
-            for (Champion champion : l) {
-                System.out.print(champion.getName() + " " + champion.getTitle() +  " " + champion.getIcon() + "\n");
-            }
+            //List<Champion> l = d.readJson();
+            //for (Champion champion : l) {
+             //   System.out.print(champion.getName() + " " + champion.getTitle() +  " " + champion.getIcon() + "\n");
+            //}
         } catch (IOException var5) {
             var5.printStackTrace();
         }
