@@ -29,47 +29,42 @@ import javafx.util.Callback;
 
 public class View2 implements Initializable
 {
+    @FXML
     public Button select;
-    @FXML
     public ComboBox<Champion> cbChamps;
-    @FXML
-    public Label lblChampionName;
-    @FXML
+    public Label lblChampionName, lblDmg, lblHP, lblMagic, lblChampTitle;
     public ImageView ivChampPic;
-    @FXML
-    public ProgressBar pbDmg;
-    @FXML
-    public ProgressBar pbHP;
-    @FXML
-    public ProgressBar pbMagic;
-    @FXML
-    public Label lblDmg;
-    @FXML
-    public Label lblHP;
-    @FXML
-    public Label lblMagic;
+    public ProgressBar pbDmg, pbHP, pbMagic;
 
 
-    public View2() throws IOException
-    {
+    DataSource d = new DataSource();
+
+    public View2() {
 
     }
 
     private ObservableList<Champion> fillDropdown() throws IOException
     {
-        DataSource d = new DataSource();
+
         List<Champion> l = d.readJson();
-        ObservableList<Champion> oList = FXCollections.observableArrayList(l);
-        return oList;
+        return FXCollections.observableArrayList(l);
+    }
+
+    private Champion getRandomChamp() throws IOException
+    {
+        return d.randomChamp();
     }
 
     @FXML
-    void select(ActionEvent event) {
+    void select(ActionEvent event) throws IOException {
         Parent root = null;
         Stage stage = (Stage)this.select.getScene().getWindow();
-
-        try {
-            root = (Parent)FXMLLoader.load(this.getClass().getResource("view3_prefightscreen.fxml"));
+        View3 controller = new View3(cbChamps.getValue(), getRandomChamp(), "Single");
+        try
+        {
+            FXMLLoader loader = new FXMLLoader((this.getClass().getResource("view3_prefightscreen.fxml")));
+            loader.setController(controller);
+            root = loader.load();
         } catch (IOException var5) {
             var5.printStackTrace();
         }
@@ -86,14 +81,13 @@ public class View2 implements Initializable
         {
             ObservableList<Champion> list = fillDropdown();
             cbChamps.setItems(list);
-            Callback<ListView<Champion>, ListCell<Champion>> factory = lv -> new ListCell<Champion>() {
+            Callback<ListView<Champion>, ListCell<Champion>> factory = lv -> new ListCell<>() {
                 @Override
                 protected void updateItem(Champion champ, boolean empty) {
                     super.updateItem(champ, empty);
                     setText(empty ? "" : champ.getName());
                 }
             };
-
 
             cbChamps.setCellFactory(factory);
             cbChamps.setButtonCell(factory.call(null));
@@ -109,6 +103,8 @@ public class View2 implements Initializable
         Champion c = cbChamps.getValue();
         //Sets Label text to Champion name
         lblChampionName.setText(c.getName());
+        //Sets ChampTitle
+        lblChampTitle.setText(c.getTitle());
         //Gets the Icon URL
         String sPicLink = c.getIcon();
         //ImageObject
