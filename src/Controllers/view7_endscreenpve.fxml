@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="121.0" layoutY="11.0" prefHeight="382.0" prefWidth="404.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="111.0" text="Du hast">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="191.0" text="Gewonnen/Verloren">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="176.0" fitWidth="182.0" layoutX="208.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

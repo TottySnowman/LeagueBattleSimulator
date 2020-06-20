@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="559.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutX="-1.0" layoutY="11.0" prefHeight="473.0" prefWidth="836.0">
+                    <children>
+                        <Pane prefHeight="150.0" prefWidth="836.0">
+                            <children>
+                                <Label text="" fx:id="lblChamp1">
+                                    <font>
+                                        <Font size="96.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="ivChamp1" fitHeight="129.0" fitWidth="184.0" layoutX="541.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                <Label layoutX="363.0" layoutY="141.0" text="VS">
+                                    <font>
+                                        <Font size="96.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane layoutY="286.0" prefHeight="148.0" prefWidth="836.0">
+                            <children>
+                                <Label alignment="CENTER_RIGHT" layoutX="285.0" layoutY="4.0" prefHeight="141.0" prefWidth="545.0" text="" fx:id="lblChamp2">
+                                    <font>
+                                        <Font size="96.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="ivChamp2" fitHeight="150.0" fitWidth="219.0" layoutX="7.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </Pane>
+                        <Button fx:id="btnFight" layoutX="638.0" layoutY="480.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="184.0" text="Fight!" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="27.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnReturn" layoutX="14.0" layoutY="480.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="184.0" text="Return">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
