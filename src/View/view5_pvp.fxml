@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View2">
+<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View2">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="603.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
@@ -19,7 +20,10 @@
                         </Label>
                         <ImageView fx:id="ivChampPic1" fitHeight="104.0" fitWidth="141.0" layoutX="296.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
                         <ComboBox fx:id="cbChamps1" layoutX="51.0" layoutY="190.0" onAction="#comboChanged" prefWidth="150.0" promptText="Select Champion" />
-                        <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="26.0" layoutY="25.0" prefHeight="148.0" prefWidth="200.0">
+                         <Label fx:id="lblDmg" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="162.0" prefHeight="17.0" prefWidth="69.0" />
+                         <Label fx:id="lblHP" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="162.0" prefHeight="17.0" prefWidth="63.0" />
+                         <Label fx:id="lblMagic" alignment="CENTER" contentDisplay="CENTER" layoutX="157.0" layoutY="162.0" prefHeight="17.0" prefWidth="69.0" />
+                        <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="26.0" layoutY="14.0" prefHeight="148.0" prefWidth="200.0">
                            <items>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="63.0">
                                  <children>
@@ -47,7 +51,7 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="394.0">
                             <children>
                                 <Button fx:id="select" layoutX="226.0" layoutY="192.0" mnemonicParsing="false" onAction="#select" text="Select" />
-                                <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="26.0" layoutY="29.0" prefHeight="148.0" prefWidth="200.0">
+                                <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="26.0" layoutY="14.0" prefHeight="148.0" prefWidth="200.0">
                                     <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="63.0">
                                             <children>
@@ -70,6 +74,9 @@
                                     </items>
                                 </SplitPane>
                                 <ComboBox fx:id="cbChamps" layoutX="51.0" layoutY="192.0" onAction="#comboChanged" prefWidth="150.0" promptText="Select Champion" />
+                                <Label fx:id="lblDmg" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="162.0" prefHeight="17.0" prefWidth="69.0" />
+                                <Label fx:id="lblHP" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="162.0" prefHeight="17.0" prefWidth="63.0" />
+                                <Label fx:id="lblMagic" alignment="CENTER" contentDisplay="CENTER" layoutX="157.0" layoutY="162.0" prefHeight="17.0" prefWidth="69.0" />
                                 <ImageView fx:id="ivChampPic" fitHeight="104.0" fitWidth="141.0" layoutX="286.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
                                 <Label fx:id="lblChampionName" layoutX="237.0" layoutY="14.0" prefHeight="43.0" prefWidth="200.0">
                                     <font>
