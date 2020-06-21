@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 public class View2 implements Initializable
 {
     @FXML
-    public Button select;
+    public Button select,btnRPvX;
     public ComboBox<Champion> cbChamps;
     public Label lblChampionName, lblDmg, lblHP, lblMagic, lblChampTitle;
     public ImageView ivChampPic;
@@ -72,5 +72,23 @@ public class View2 implements Initializable
     public void comboChanged(ActionEvent event)
     {
         CrossController.setChamps(cbChamps, lblChampionName, lblChampTitle, lblDmg, lblMagic, lblHP, pbDmg, pbHP, pbMagic, ivChampPic);
+    }
+
+    public void returnHome(ActionEvent actionEvent)
+    {
+        Parent root = null;
+        Stage stage = (Stage)this.select.getScene().getWindow();
+
+        try
+        {
+            FXMLLoader loader = loader = new FXMLLoader(this.getClass().getResource("../View/view1_Homescreen.fxml"));
+            root = loader.load();
+        } catch (IOException var5) {
+            var5.printStackTrace();
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

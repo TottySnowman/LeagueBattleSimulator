@@ -130,10 +130,6 @@ public class View3 implements Initializable
                 loader = new FXMLLoader(this.getClass().getResource("../View/view7_fightscreenpvp.fxml"));
                 loader.setController(fight);
                 break;
-
-            case "return":
-                loader = new FXMLLoader(this.getClass().getResource("../View/view1_Homescreen.fxml"));
-                break;
         }
         root = loader.load();
         Scene scene = new Scene(root);

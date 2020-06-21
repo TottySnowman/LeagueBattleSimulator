@@ -56,7 +56,7 @@
                                 <Label fx:id="lblDmg" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="204.0" prefHeight="17.0" prefWidth="69.0" />
                                 <Label fx:id="lblHP" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="204.0" prefHeight="17.0" prefWidth="63.0" />
                                 <Label fx:id="lblMagic" alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="204.0" prefHeight="17.0" prefWidth="69.0" />
-                        <Button fx:id="btnRPvX" layoutX="22.0" layoutY="122.0" mnemonicParsing="false" text="◀">
+                        <Button fx:id="btnRPvX" layoutX="22.0" layoutY="122.0" mnemonicParsing="false" text="◀" onAction="#returnHome">
                            <font>
                               <Font size="21.0" />
                            </font>
