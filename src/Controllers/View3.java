@@ -28,7 +28,7 @@ public class View3 implements Initializable
     @FXML
     public Label lblChamp1,lblChamp2;
     public ImageView ivChamp1, ivChamp2;
-    public Button btnReturn, btnFight;
+    public Button btnReturn, btnFight, btnRPvX;
     public Champion champ1, champ2;
     public String sMode;
 
@@ -92,6 +92,17 @@ public class View3 implements Initializable
                 }
             }
         });
+
+        btnRPvX.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    setScene(btnRPvX, "return");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     private void setScene(Button btnName, String sAction) throws IOException
@@ -118,6 +129,10 @@ public class View3 implements Initializable
             case "fPVP":
                 loader = new FXMLLoader(this.getClass().getResource("../View/view7_fightscreenpvp.fxml"));
                 loader.setController(fight);
+                break;
+
+            case "return":
+                loader = new FXMLLoader(this.getClass().getResource("../View/view1_Homescreen.fxml"));
                 break;
         }
         root = loader.load();
