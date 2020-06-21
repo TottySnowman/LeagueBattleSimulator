@@ -46,7 +46,7 @@
                               </AnchorPane>
                            </items>
                         </SplitPane>
-                        <Button fx:id="select1" layoutX="226.0" layoutY="190.0" mnemonicParsing="false" onAction="#select" text="Select" />
+                        <Button fx:id="select1" layoutX="226.0" layoutY="190.0" mnemonicParsing="false" onAction="#select1" text="Select" />
                         <Label fx:id="lblChampTitle1" layoutX="237.0" layoutY="53.0" prefHeight="43.0" prefWidth="200.0">
                            <font>
                                <Font size="15.0" />

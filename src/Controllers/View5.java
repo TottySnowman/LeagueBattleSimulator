@@ -27,6 +27,8 @@ public class View5 implements Initializable
     public ImageView ivChampPic, ivChampPic1;
     public ProgressBar pbDmg, pbHP, pbMagic, pbDmg1, pbHP1, pbMagic1;
 
+    public Champion champ1, champ2;
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -50,7 +52,12 @@ public class View5 implements Initializable
 
     public void select(ActionEvent actionEvent)
     {
+        champ1 = cbChamps.getValue();
+    }
 
+    public void select1(ActionEvent actionEvent)
+    {
+        champ2 = cbChamps1.getValue();
     }
 
     public void returnHome(ActionEvent actionEvent)
