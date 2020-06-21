@@ -6,7 +6,6 @@
 package Controllers;
 
 import Data.Champion;
-import Data.Fight;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
