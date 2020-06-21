@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View1">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
@@ -20,9 +21,14 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                             <children>
-                                <Button fx:id="singleplayer" layoutX="122.0" layoutY="44.0" mnemonicParsing="false" onAction="#singleplayer" text="Singleplayer" prefHeight="31.0" prefWidth="101.0"/>
-                                <Button fx:id="multiplayer" layoutX="122.0" layoutY="209.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="101.0" text="Settings" />
-                                <Button fx:id="settings" layoutX="122.0" layoutY="121.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="101.0" text="Multiplayer" />
+                                <Button fx:id="singleplayer" layoutX="67.0" layoutY="52.0" mnemonicParsing="false" onAction="#singleplayer" prefHeight="14.0" prefWidth="211.0" text="Singleplayer">
+                           <font>
+                              <Font size="30.0" />
+                           </font></Button>
+                                <Button fx:id="settings" layoutX="67.0" layoutY="153.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="211.0" text="Multiplayer">
+                           <font>
+                              <Font size="30.0" />
+                           </font></Button>
                             </children>
                         </AnchorPane>
                     </items>
