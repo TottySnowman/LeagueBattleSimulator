@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View2">
+<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View2">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="603.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
@@ -28,7 +29,7 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="279.0" prefWidth="360.0">
                             <children>
-                                <Button fx:id="select" layoutX="287.0" layoutY="129.0" mnemonicParsing="false" onAction="#select" text="Select" />
+                                <Button fx:id="select" layoutX="287.0" layoutY="123.0" mnemonicParsing="false" onAction="#select" prefHeight="45.0" prefWidth="60.0" text="Select" />
                                 <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="81.0" layoutY="14.0" prefHeight="190.0" prefWidth="200.0">
                                     <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="63.0">
@@ -55,6 +56,11 @@
                                 <Label fx:id="lblDmg" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="204.0" prefHeight="17.0" prefWidth="69.0" />
                                 <Label fx:id="lblHP" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="204.0" prefHeight="17.0" prefWidth="63.0" />
                                 <Label fx:id="lblMagic" alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="204.0" prefHeight="17.0" prefWidth="69.0" />
+                        <Button layoutX="22.0" layoutY="122.0" mnemonicParsing="false" text="◀">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
                             </children>
                         </AnchorPane>
                     </items>
