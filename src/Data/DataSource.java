@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class DataSource
 {
-   public List<Champion> readJson() throws IOException
+   public static List<Champion> readJson() throws IOException
    {
       Gson g = new Gson();
       JsonReader reader = new JsonReader(new FileReader("Files/champions.json"));
@@ -19,7 +19,7 @@ public class DataSource
       return Arrays.asList(champions);
    }
 
-   public Champion randomChamp() throws IOException
+   public static Champion randomChamp() throws IOException
    {
       List<Champion> cList = readJson();
       Random rand = new Random();

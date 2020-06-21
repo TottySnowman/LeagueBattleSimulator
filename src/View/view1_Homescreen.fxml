@@ -12,7 +12,7 @@
                     <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="94.0" prefWidth="345.0">
                             <children>
-                                <Label layoutX="14.0" layoutY="17.0" prefHeight="43.0" prefWidth="318.0" text="Gametitle-Placeholder">
+                                <Label layoutX="14.0" layoutY="17.0" prefHeight="43.0" prefWidth="318.0" text="League Battle Simulator">
                                     <font>
                                         <Font size="32.0" />
                                     </font>
@@ -25,7 +25,7 @@
                            <font>
                               <Font size="30.0" />
                            </font></Button>
-                                <Button fx:id="settings" layoutX="67.0" layoutY="153.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="211.0" text="Multiplayer">
+                                <Button fx:id="multiplayer" layoutX="67.0" layoutY="153.0" mnemonicParsing="false" onAction="#multiplayer" prefHeight="66.0" prefWidth="211.0" text="Multiplayer">
                            <font>
                               <Font size="30.0" />
                            </font></Button>
