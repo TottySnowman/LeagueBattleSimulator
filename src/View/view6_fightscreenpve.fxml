@@ -19,18 +19,16 @@
                      <children>
                         <Label layoutX="14.0" layoutY="35.0" text="hatte [ATK/DEF] gemacht" />
                         <Label layoutX="14.0" layoutY="14.0" text="ChampionName" />
-                        <ImageView fitHeight="128.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true" />
-                        <ProgressBar fx:id="enemyhpbar" layoutX="204.0" layoutY="128.0" prefWidth="200.0" progress="0.51" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </Pane>
-                  <Pane layoutY="157.0" prefHeight="211.0" prefWidth="404.0">
+                  <Pane layoutY="171.0" prefHeight="211.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="137.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button layoutX="14.0" layoutY="182.0" mnemonicParsing="false" text="Attack" />
-                        <Button layoutX="86.0" layoutY="182.0" mnemonicParsing="false" text="Block" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" text="Attack" />
+                        <Button layoutX="83.0" layoutY="166.0" mnemonicParsing="false" text="Block" />
                         <Label layoutX="231.0" layoutY="14.0" text="ChampionName" />
                         <Label layoutX="231.0" layoutY="35.0" text="hatte [ATK/DEF] gemacht" />
-                        <ProgressBar fx:id="hpbar" layoutX="14.0" layoutY="153.0" prefWidth="200.0" progress="0.52" />
                      </children>
                   </Pane>
                </children>
