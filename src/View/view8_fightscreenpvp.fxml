@@ -17,19 +17,19 @@
                <children>
                   <Pane layoutY="195.0" prefHeight="187.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp"/>
                         <Button layoutX="14.0" layoutY="142.0" mnemonicParsing="false" text="Attack" />
                         <Button layoutX="86.0" layoutY="142.0" mnemonicParsing="false" text="Block" />
-                        <Label layoutX="231.0" layoutY="14.0" text="ChampionName" />
+                        <Label layoutX="231.0" layoutY="14.0" text="" fx:id="lblChampName"/>
                         <Label layoutX="231.0" layoutY="35.0" text="hatte [ATK/DEF] gemacht" />
                      </children>
                   </Pane>
                   <Pane prefHeight="187.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="193.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="193.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp1"/>
                         <Button layoutX="262.0" layoutY="14.0" mnemonicParsing="false" text="Attack" />
                         <Button layoutX="337.0" layoutY="14.0" mnemonicParsing="false" text="Block" />
-                        <Label layoutX="22.0" layoutY="131.0" text="ChampionName" />
+                        <Label layoutX="22.0" layoutY="131.0" text="" fx:id="lblChampName1"/>
                         <Label layoutX="22.0" layoutY="152.0" text="hatte [ATK/DEF] gemacht" />
                      </children>
                   </Pane>

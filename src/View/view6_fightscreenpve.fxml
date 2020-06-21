@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <children>
@@ -18,16 +13,16 @@
                   <Pane prefHeight="149.0" prefWidth="404.0">
                      <children>
                         <Label layoutX="14.0" layoutY="35.0" text="hate [ATK/DEF] gemacht" />
-                        <Label layoutX="14.0" layoutY="14.0" text="ChampionName" />
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="14.0" layoutY="14.0" text="ChampionName" fx:id="lblChampName"/>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp"/>
                      </children>
                   </Pane>
                   <Pane layoutY="171.0" prefHeight="211.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" text="Attack" />
-                        <Button layoutX="83.0" layoutY="166.0" mnemonicParsing="false" text="Block" />
-                        <Label layoutX="231.0" layoutY="14.0" text="ChampionName" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp1"/>
+                        <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" text="Attack" fx:id="btnAttack"/>
+                        <Button layoutX="83.0" layoutY="166.0" mnemonicParsing="false" text="Block" fx:id="btnBlock"/>
+                        <Label layoutX="231.0" layoutY="14.0" text="" fx:id="lblChampName1"/>
                         <Label layoutX="231.0" layoutY="35.0" text="hate [ATK/DEF] gemacht" />
                      </children>
                   </Pane>
