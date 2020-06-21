@@ -2,6 +2,7 @@ package Controllers;
 
 import Data.Champion;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,7 +22,7 @@ import java.util.ResourceBundle;
 public class View5 implements Initializable
 {
     @FXML
-    public Button select, select1, btnRPvX;
+    public Button btnRPvX, btnFight;
     public ComboBox<Champion> cbChamps1, cbChamps;
     public Label lblChampionName, lblDmg, lblHP, lblMagic, lblChampTitle, lblChampionName1, lblDmg1, lblHP1, lblMagic1, lblChampTitle1;
     public ImageView ivChampPic, ivChampPic1;
@@ -38,6 +39,27 @@ public class View5 implements Initializable
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        btnFight.setOnAction(new EventHandler<ActionEvent>()
+        {
+            @Override public void handle(ActionEvent e) {
+                Parent root = null;
+                Stage stage = (Stage)btnFight.getScene().getWindow();
+                View3 controller = new View3(cbChamps.getValue(), cbChamps1.getValue(), "PVP");
+                try
+                {
+                    FXMLLoader loader = new FXMLLoader((this.getClass().getResource("../View/view3_prefightscreen.fxml")));
+                    loader.setController(controller);
+                    root = loader.load();
+                } catch (IOException var5) {
+                    var5.printStackTrace();
+                }
+
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+        });
     }
 
     public void comboChanged(ActionEvent Event)
@@ -48,16 +70,6 @@ public class View5 implements Initializable
     public void comboChanged1(ActionEvent actionEvent)
     {
         CrossController.setChamps(cbChamps1, lblChampionName1, lblChampTitle1, lblDmg1, lblMagic1, lblHP1, pbDmg1, pbHP1, pbMagic1, ivChampPic1);
-    }
-
-    public void select(ActionEvent actionEvent)
-    {
-        champ1 = cbChamps.getValue();
-    }
-
-    public void select1(ActionEvent actionEvent)
-    {
-        champ2 = cbChamps1.getValue();
     }
 
     public void returnHome(ActionEvent actionEvent)

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View5">
+<VBox prefHeight="517.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.View5">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="603.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
@@ -46,7 +45,6 @@
                               </AnchorPane>
                            </items>
                         </SplitPane>
-                        <Button fx:id="select1" layoutX="226.0" layoutY="190.0" mnemonicParsing="false" onAction="#select1" text="Select" />
                         <Label fx:id="lblChampTitle1" layoutX="237.0" layoutY="53.0" prefHeight="43.0" prefWidth="200.0">
                            <font>
                                <Font size="15.0" />
@@ -56,7 +54,6 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="394.0">
                             <children>
-                                <Button fx:id="select" layoutX="226.0" layoutY="192.0" mnemonicParsing="false" onAction="#select" text="Select" />
                                 <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutX="26.0" layoutY="14.0" prefHeight="148.0" prefWidth="200.0">
                                     <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="63.0">
@@ -98,11 +95,12 @@
                         </AnchorPane>
                     </items>
                 </SplitPane>
-            <Button fx:id="btnRPvX" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="58.0" text="◀" onAction="#returnHome">
+            <Button fx:id="btnRPvX" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="31.0" prefWidth="58.0" text="◀">
                <font>
                   <Font size="31.0" />
                </font>
             </Button>
+            <Button fx:id="btnFight" layoutX="546.0" layoutY="226.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="68.0" prefWidth="58.0" text="Fight!" />
             </children>
         </AnchorPane>
     </children>

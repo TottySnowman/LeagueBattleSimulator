@@ -92,17 +92,6 @@ public class View3 implements Initializable
                 }
             }
         });
-
-        btnRPvX.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    setScene(btnRPvX, "return");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
     }
 
     private void setScene(Button btnName, String sAction) throws IOException
