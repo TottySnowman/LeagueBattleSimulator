@@ -1,6 +1,5 @@
 package Controllers;
 
-import Data.DataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +23,7 @@ public class View1 {
         Stage stage = (Stage)this.singleplayer.getScene().getWindow();
         try
         {
-            root = (Parent)FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
+            root = (Parent)FXMLLoader.load(this.getClass().getResource("../View/view2_pve.fxml"));
         }
         catch (IOException var5)
         {

@@ -17,7 +17,7 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) {
         try {
-            VBox root = (VBox)FXMLLoader.load(this.getClass().getResource("view1_Homescreen.fxml"));
+            VBox root = (VBox)FXMLLoader.load(this.getClass().getResource("../View/view1_Homescreen.fxml"));
             Scene scene = new Scene(root, 600.0D, 600.0D);
             //scene.getStylesheets().add(this.getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);

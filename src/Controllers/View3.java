@@ -6,7 +6,7 @@
 package Controllers;
 
 import Data.Champion;
-import javafx.application.Application;
+import Data.Fight;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -61,7 +61,19 @@ public class View3 implements Initializable
         {
             @Override public void handle(ActionEvent e)
             {
-                //Fight
+                String sAction = "fPVE";
+                if(sMode.equals("PVP"))
+                {
+                    sAction = "fPVP";
+                }
+                try
+                {
+                    setScene(btnFight, sAction);
+                }
+                catch (IOException ioException)
+                {
+                    ioException.printStackTrace();
+                }
             }
         });
 
@@ -70,34 +82,47 @@ public class View3 implements Initializable
             @Override
             public void handle(ActionEvent event)
             {
-                Parent root = null;
-                Stage stage = (Stage)btnReturn.getScene().getWindow();
-                if(sMode.equals("Single"))
+                try
                 {
-                    try
-                    {
-                        root = (Parent) FXMLLoader.load(this.getClass().getResource("view2_championselectpve.fxml"));
-                    }
-                    catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
+                    setScene(btnReturn, sMode);
                 }
-                else
+                catch (IOException e)
                 {
-                    try
-                    {
-                        root = (Parent) FXMLLoader.load(this.getClass().getResource(""));
-                    }
-                    catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
+                    e.printStackTrace();
                 }
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
             }
         });
+    }
+
+    private void setScene(Button btnName, String sAction) throws IOException
+    {
+        Parent root = null;
+        Stage stage = (Stage)btnName.getScene().getWindow();
+        FXMLLoader loader = null;
+        Fight fight = new Fight(champ1, champ2);
+        switch(sAction)
+        {
+            case "PVE":
+                loader = new FXMLLoader(this.getClass().getResource("../View/view2_pve.fxml"));
+                break;
+
+            case "PVP":
+                loader = new FXMLLoader(this.getClass().getResource("../View/view5_pvp.fxml"));
+                break;
+
+            case "fPVE":
+                loader = new FXMLLoader(this.getClass().getResource("../View/view6_fightscreenpve.fxml"));
+                loader.setController(fight);
+                break;
+
+            case "fPVP":
+                loader = new FXMLLoader(this.getClass().getResource("../View/view7_fightscreenpvp.fxml"));
+                loader.setController(fight);
+                break;
+        }
+        root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

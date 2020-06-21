@@ -45,7 +45,6 @@ public class View2 implements Initializable
 
     private ObservableList<Champion> fillDropdown() throws IOException
     {
-
         List<Champion> l = d.readJson();
         return FXCollections.observableArrayList(l);
     }
@@ -56,13 +55,14 @@ public class View2 implements Initializable
     }
 
     @FXML
-    void select(ActionEvent event) throws IOException {
+    void select(ActionEvent event) throws IOException
+    {
         Parent root = null;
         Stage stage = (Stage)this.select.getScene().getWindow();
-        View3 controller = new View3(cbChamps.getValue(), getRandomChamp(), "Single");
+        View3 controller = new View3(cbChamps.getValue(), getRandomChamp(), "PVE");
         try
         {
-            FXMLLoader loader = new FXMLLoader((this.getClass().getResource("view3_prefightscreen.fxml")));
+            FXMLLoader loader = new FXMLLoader((this.getClass().getResource("../View/view3_prefightscreen.fxml")));
             loader.setController(controller);
             root = loader.load();
         } catch (IOException var5) {
@@ -81,7 +81,7 @@ public class View2 implements Initializable
         {
             ObservableList<Champion> list = fillDropdown();
             cbChamps.setItems(list);
-            Callback<ListView<Champion>, ListCell<Champion>> factory = lv -> new ListCell<>() {
+            Callback<ListView<Champion>, ListCell<Champion>> factory = lv -> new ListCell<Champion>() {
                 @Override
                 protected void updateItem(Champion champ, boolean empty) {
                     super.updateItem(champ, empty);
