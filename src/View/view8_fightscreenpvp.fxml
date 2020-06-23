@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
@@ -12,21 +11,21 @@
                <children>
                   <Pane layoutY="195.0" prefHeight="187.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp1"/>
                         <Button layoutX="14.0" layoutY="155.0" mnemonicParsing="false" text="Attack" />
                         <Button layoutX="79.0" layoutY="155.0" mnemonicParsing="false" text="Block" />
-                        <Label layoutX="231.0" layoutY="14.0" text="ChampionName" />
-                        <Label layoutX="231.0" layoutY="35.0" text="hatte [ATK/DEF] gemacht" />
+                        <Label layoutX="231.0" layoutY="14.0" text="" fx:id="lblChampName1"/>
+                        <Label layoutX="231.0" layoutY="35.0" text="" fx:id="lblDmgChamp1"/>
                         <ProgressBar fx:id="hpbar" layoutX="14.0" layoutY="129.0" prefWidth="200.0" progress="1.0" />
                      </children>
                   </Pane>
                   <Pane prefHeight="187.0" prefWidth="404.0">
                      <children>
-                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="193.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="193.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" fx:id="ivChamp2"/>
                         <Button layoutX="274.0" layoutY="8.0" mnemonicParsing="false" text="Attack" />
                         <Button layoutX="337.0" layoutY="8.0" mnemonicParsing="false" text="Block" />
-                        <Label layoutX="22.0" layoutY="131.0" text="ChampionName" />
-                        <Label layoutX="22.0" layoutY="152.0" text="hatte [ATK/DEF] gemacht" />
+                        <Label layoutX="22.0" layoutY="131.0" text="" fx:id="lblChampName2"/>
+                        <Label layoutX="22.0" layoutY="152.0" text="" fx:id="lblDmgChamp2"/>
                         <ProgressBar fx:id="enemyhpbar" layoutX="193.0" layoutY="170.0" prefWidth="200.0" progress="1.0" />
                      </children>
                   </Pane>

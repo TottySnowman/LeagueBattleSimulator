@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import Data.Champion;
 import Data.DataSource;
+import Interfaces.IDataStructure;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ import javafx.stage.Stage;
 
 public class View2 implements Initializable
 {
+    private static IDataStructure data = new DataSource();
     @FXML
     public Button select,btnRPvX;
     public ComboBox<Champion> cbChamps;
@@ -32,7 +34,7 @@ public class View2 implements Initializable
 
     private Champion getRandomChamp() throws IOException
     {
-        return DataSource.randomChamp();
+        return data.getRandomChampion();
     }
 
     @FXML

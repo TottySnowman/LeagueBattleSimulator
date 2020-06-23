@@ -3,16 +3,12 @@ package Controllers;
 import Data.Champion;
 import Data.DataSource;
 import Data.Stats;
+import Interfaces.IDataStructure;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -20,6 +16,7 @@ import java.util.List;
 
 public class CrossController
 {
+    private static IDataStructure data = new DataSource();
     public static void fillComboBox(ComboBox cbBox) throws IOException
     {
         ObservableList<Champion> list = convertList();
@@ -38,7 +35,7 @@ public class CrossController
 
     private static ObservableList<Champion>  convertList() throws IOException
     {
-        List<Champion> l = DataSource.readJson();
+        List<Champion> l = data.getChampions();
         return FXCollections.observableArrayList(l);
     }
 

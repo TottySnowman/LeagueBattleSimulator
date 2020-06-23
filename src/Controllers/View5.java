@@ -28,38 +28,16 @@ public class View5 implements Initializable
     public ImageView ivChampPic, ivChampPic1;
     public ProgressBar pbDmg, pbHP, pbMagic, pbDmg1, pbHP1, pbMagic1;
 
-    public Champion champ1, champ2;
-
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        try {
+        try
+        {
             CrossController.fillComboBox(cbChamps);
             CrossController.fillComboBox(cbChamps1);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        btnFight.setOnAction(new EventHandler<ActionEvent>()
-        {
-            @Override public void handle(ActionEvent e) {
-                Parent root = null;
-                Stage stage = (Stage)btnFight.getScene().getWindow();
-                View3 controller = new View3(cbChamps.getValue(), cbChamps1.getValue(), "PVP");
-                try
-                {
-                    FXMLLoader loader = new FXMLLoader((this.getClass().getResource("../View/view3_prefightscreen.fxml")));
-                    loader.setController(controller);
-                    root = loader.load();
-                } catch (IOException var5) {
-                    var5.printStackTrace();
-                }
-
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
     }
 
     public void comboChanged(ActionEvent Event)
@@ -80,6 +58,25 @@ public class View5 implements Initializable
         try
         {
             FXMLLoader loader = loader = new FXMLLoader(this.getClass().getResource("../View/view1_Homescreen.fxml"));
+            root = loader.load();
+        } catch (IOException var5) {
+            var5.printStackTrace();
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void FightPVP(ActionEvent actionEvent)
+    {
+        Parent root = null;
+        Stage stage = (Stage)btnFight.getScene().getWindow();
+        View3 controller = new View3(cbChamps.getValue(), cbChamps1.getValue(), "PVP");
+        try
+        {
+            FXMLLoader loader = new FXMLLoader((this.getClass().getResource("../View/view3_prefightscreen.fxml")));
+            loader.setController(controller);
             root = loader.load();
         } catch (IOException var5) {
             var5.printStackTrace();

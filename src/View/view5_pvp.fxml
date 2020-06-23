@@ -100,7 +100,7 @@
                   <Font size="31.0" />
                </font>
             </Button>
-            <Button fx:id="btnFight" layoutX="546.0" layoutY="226.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="68.0" prefWidth="58.0" text="Fight!" />
+            <Button fx:id="btnFight" layoutX="546.0" layoutY="226.0" mnemonicParsing="false" onAction="#FightPVP" prefHeight="68.0" prefWidth="58.0" text="Fight!" />
             </children>
         </AnchorPane>
     </children>
